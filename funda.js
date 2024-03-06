@@ -22,8 +22,35 @@ app.use(express.static('public'))
 // Zorg dat werken met request data makkelijker wordt
 app.use(express.urlencoded({extended: true}))
 
-// BEGIN
+// BEGIN EIGEN CODE
 
+
+app.get('/', function(request, response) {
+        fetchJson('https://fdnd-agency.directus.app/items/f_list').then((apiData) => {
+    
+    
+        try{
+            apiData.data.custom = JSON.parse(apiData.data.custom)
+        } catch (e) {
+            apiData.data.custom = {}
+        }
+            response.render('homepage', {data: apiData.data[0]})
+        });
+})
+
+
+app.get('/fav-lijst', function(request, response) {
+    fetchJson('https://fdnd-agency.directus.app/items/f_list').then((apiData) => {
+
+
+    try{
+        apiData.data.custom = JSON.parse(apiData.data.custom)
+    } catch (e) {
+        apiData.data.custom = {}
+    }
+        response.render('fav-lijst', {data: apiData.data[0]})
+	});
+})
 
 
 
