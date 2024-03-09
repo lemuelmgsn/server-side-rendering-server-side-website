@@ -27,20 +27,22 @@ app.use(express.urlencoded({extended: true}))
 
 app.get('/', function(request, response) {
         fetchJson('https://fdnd-agency.directus.app/items/f_list').then((apiData) => {
-    
-    
             response.render('homepage', {data: apiData.data})
         });
 })
 
-
 app.get('/fav-lijst', function(request, response) {
-    fetchJson('https://fdnd-agency.directus.app/items/f_list').then((apiData) => {
-
-
+    fetchJson('https://fdnd-agency.directus.app/items/f_houses').then((apiData) => {
         response.render('fav-lijst', {data: apiData.data})
 	});
 })
+
+app.get('/detail', function(request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/f_houses').then((apiData) => {
+      response.render('detail', {data: apiData.data})
+  });
+})
+
 
 
 

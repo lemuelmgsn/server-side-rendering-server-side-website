@@ -1,4 +1,17 @@
+<%- include('./partials/head') %>
+
+
 <h1>Home</h1>
 <h2><%= data.title %></h2>
 <p>test</p>
 <a href="http://localhost:8000/fav-lijst">Bewaarde Huizen</a>
+
+<form>
+    <p>Filter op:</p>
+    <select>
+        <option>Prijs</option>
+        <option>Bewaardatum</option>
+        <option>Datum</option>
+        <option>Plaats</option>
+    </select>
+</form>

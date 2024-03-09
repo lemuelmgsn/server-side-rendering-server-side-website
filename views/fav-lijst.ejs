@@ -1,5 +1,36 @@
-<!-- <h1>Bewaarde Huizen</h1> -->
-<h1>Bewaarde huizen</h1>
-<p>filter op: Prijs - Postcode - Adres</p>
-<a href="http://localhost:8000/">Terug naar home</a>
+<%- include('./partials/head') %>
+
+<main>
+
+    <h1>Bewaarde huizen</h1>
+    <form>
+        <p>Filter op:</p>
+        <select>
+            <option>Prijs</option>
+            <option>Bewaardatum</option>
+            <option>Datum</option>
+            <option>Plaats</option>
+        </select>
+    </form>
+    <!-- <a href="http://localhost:8000/">Terug naar home</a> -->
+
+</main>
+
+<section class="house-template">    
+    <% data.forEach(house => { %>
+   
+    <article class="houses">
+    
+    <ul>
+        <li><img class="house-image" src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt="image house"></li>
+      <h2><%= house.street %> <%= house.house_nr %> <%= house.nr_addition %></h2>
+      <li><%= house.postal_code %></li> 
+      <li><%= house.city %></li> 
+      <li> €<%= house.price %></li> 
+      <li><%= house.agent %></li> 
+    </ul>
+    </article>
+   <% }); %>
+</section>
+
 
