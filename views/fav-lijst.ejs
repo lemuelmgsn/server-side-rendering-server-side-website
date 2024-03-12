@@ -2,7 +2,7 @@
 
 <main>
 
-    <h1>Bewaarde huizen</h1>
+    <h1 class="fav-h1">Bewaarde huizen</h1>
     <form>
         <p>Filter op:</p>
         <select>
@@ -16,7 +16,7 @@
 
 </main>
 
-<section class="house-template">    
+<!-- <section class="house-template">    
     <% data.forEach(house => { %>
    
     <article class="houses">
@@ -26,11 +26,90 @@
       <h2><%= house.street %> <%= house.house_nr %> <%= house.nr_addition %></h2>
       <li><%= house.postal_code %></li> 
       <li><%= house.city %></li> 
-      <li> €<%= house.price %></li> 
+      <li class="price"> €<%= house.price %></li> 
       <li><%= house.agent %></li> 
+      <form>
+        <textarea placeholder="Schrijf een notitie..."></textarea>
+        <button type="submit">Plaats notitie</button>
+    </form>
     </ul>
+
+    <form>
+        <textarea placeholder="Schrijf een notitie..."></textarea>
+        <button type="submit">Plaats notitie</button>
+    </form>
+
+    <button>Verwijderen x</button>
     </article>
    <% }); %>
+</section> -->
+
+<section class="house-template">    
+    <% data.forEach(house => { %>
+   
+<article class="houses">
+
+
+    <!-- <div>
+        <p><img class="house-image" src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt="image house"></p>   
+    </div>
+    
+    <div>
+         <h2><%= house.street %> <%= house.house_nr %> <%= house.nr_addition %></h2>
+        <p><%= house.postal_code %>, <%= house.city %></p> 
+        <p class="price"> €<%= house.price %></p> 
+        <p><%= house.agent %></p> 
+    </div>
+       
+    <div class="rate">
+            <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="text">1 star</label>
+    </div>
+
+        <button>Verwijderen</button> -->
+
+
+
+        <div class="grid-container">
+            <div class="image">
+                <p><img class="house-image" src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt="image house"></p> 
+            </div>
+            <div class="content">
+                <h2><%= house.street %> <%= house.house_nr %> <%= house.nr_addition %></h2>
+                <p><%= house.postal_code %>, <%= house.city %></p> 
+                <p class="price"> €<%= house.price %></p> 
+                <p><%= house.agent %></p> 
+            </div>
+            <div class="ster">
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="text">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="text">1 star</label>
+                </div>
+            </div>
+            <div class="verwijderen">
+                <button>Verwijderen</button>
+            </div>
+          </div>
+
+
+
+
+</article>
+   <% }); %>
 </section>
-
-

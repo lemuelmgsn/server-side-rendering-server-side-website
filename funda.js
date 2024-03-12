@@ -5,7 +5,8 @@ import express from 'express'
 import fetchJson from './helpers/fetch-json.js'
 
 // Haal alle squads uit de WHOIS API op
-const squadData = await fetchJson('https://fdnd.directus.app/items/squad')
+// const squadData = await fetchJson('https://fdnd.directus.app/items/squad')
+// Ik ga dit misschien later nog gebruiken
 
 // Maak een nieuwe express app aan
 const app = express()
@@ -22,8 +23,7 @@ app.use(express.static('public'))
 // Zorg dat werken met request data makkelijker wordt
 app.use(express.urlencoded({extended: true}))
 
-// 
-
+// ROUTES
 
 app.get('/', function(request, response) {
         fetchJson('https://fdnd-agency.directus.app/items/f_list').then((apiData) => {
@@ -42,9 +42,6 @@ app.get('/detail', function(request, response) {
       response.render('detail', {data: apiData.data})
   });
 })
-
-
-
 
 // 
 
