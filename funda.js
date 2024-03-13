@@ -8,6 +8,8 @@ import fetchJson from './helpers/fetch-json.js'
 // const squadData = await fetchJson('https://fdnd.directus.app/items/squad')
 // Ik ga dit misschien later nog gebruiken
 
+const apiUrl = 'https:fdnd-agency.directus.app/items/f_houses'
+
 // Maak een nieuwe express app aan
 const app = express()
 
@@ -37,7 +39,8 @@ app.get('/fav-lijst', function(request, response) {
 	});
 })
 
-app.get('/detail', function(request, response) {
+
+app.get('/detail/:id', function(request, response) {
   fetchJson('https://fdnd-agency.directus.app/items/f_houses').then((apiData) => {
       response.render('detail', {data: apiData.data})
   });

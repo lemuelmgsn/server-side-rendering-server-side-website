@@ -3,6 +3,9 @@
   padding-top: 1em;
   color: var(--primary-black);
 }
+.logo{
+ scale: .1;
+}
 form{
   margin-top: 10px;
   padding: 0 6em;
@@ -17,34 +20,27 @@ h2{
 p{
   padding-top: 3px;
 }
+main{
+  background-color: var(--primary-white);
+}
 .price{
   font-weight: bold;
 }
+.house-link{
+  color: var(--primary-blue);
+}
+.house-link:hover{
+  color: #0a4669;
+}
 .house-image{
-    height: 300px;
-    max-width: 100%;
+  height: 300px;
+  max-width: 100%;
 }
 .house-template{
-    /* border: 1px red solid; */
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.125em;
-}
-.houses{
-    border: 1px blue solid; 
-    /* display: flexbox; */
-    /* display: flexbox;
-    justify-content: center;
-    align-items: center; */
-    /* margin: 1em 2em;  */
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* grid-template-rows: 1fr 1fr; */
-    /* grid-template-areas: 
-    "image image image"
-    "info info info"
-    "stars stars verwijder"
-    ; */
+  /* border: 1px red solid; */
+  display: grid;
+  grid-template-columns: 1fr;
+  /* gap: 1.125em; */
 }
 button{
   justify-content: end;
@@ -59,17 +55,7 @@ button:hover{
   text-decoration: underline;
 }
 
-
-
-.houses > div{
-    border: 1px green solid;
-    /* width: 30%; */
-    /* padding: 1.5em; */
-    list-style-type: none;
-    /* margin: auto; */
-}
-
-/*  */
+/*  BREAKPOINTS VOOR LAYOUT */
 
 @media screen and (min-width: 457px) {
     .house-template {
@@ -86,11 +72,7 @@ button:hover{
 /* STYLING VOOR DE RATING STERRETJES */
 
 .rate {
-   float: left;
-    /* height: 46px; */
-    /* padding: 0 10px; */
-    /* width: 100px; */
-    width: 30%;
+  float: left;
 }
 .rate:not(:checked) > input {
     position:absolute;
@@ -123,19 +105,28 @@ button:hover{
   color: #c59b08;
 }
 
+/* GRID LAYOUT VOOR DE HUIZEN */
+
 .grid-container{
-  border: 5px red solid;
+  /* background-color: var(--primary-orange); */
+  margin: 2em;
+  padding: 5px;
+  border-radius: 10px;
+  border: 5px var(--primary-orange) solid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: max-content 1fr;
   grid-template-areas: 
-  'image image image'
+  'image image'
   'content content'
-  'ster ster verwijderen'
+  'ster verwijderen'
   ;
 }
 .image{
   grid-area: image;
+  width: 100%;
+}
+.image img{
+  width: 100%;
 }
 .content{
   grid-area: content;
@@ -145,4 +136,6 @@ button:hover{
 }
 .verwijderen{
   grid-area: verwijderen;
+  justify-self: end;
+  align-self: center;
 }
