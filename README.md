@@ -33,6 +33,8 @@ Technieken die ik heb gebruikt:
 
 HTML
 CSS
+node.js
+Express
 
 
 ## Installatie
