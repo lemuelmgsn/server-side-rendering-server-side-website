@@ -3,6 +3,8 @@
 # Titel
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
+Funda herontwerp van favorietenlijst
+
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
@@ -17,11 +19,21 @@
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
+Maak een herontwerp van de "Favorieten" pagina.
+
 ## Gebruik
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 
+De gebruiker wilt hierbij huizen kunnen toevoegen aan hun favorieten lijst. Daarbij zou de gebruiker ook verschillende lijsten/folders kunnen maken waarbij je huizen kan sorteren op bijv. plaats, prijs etc. Het zou leuk zijn om hierbij een huis een rating te geven met sterretjes en om een korte/kleine notitie achter te laten.
+
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+
+Technieken die ik heb gebruikt:
+
+HTML
+CSS
+
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
