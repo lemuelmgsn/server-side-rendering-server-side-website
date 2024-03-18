@@ -69,6 +69,13 @@ button:hover{
     }
   }
 
+  @media screen and (min-width: 1076px) {
+    .house-template{
+      /* grid-template-columns: 1fr 1fr 1fr; */
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
 /* STYLING VOOR DE RATING STERRETJES */
 
 .rate {
@@ -112,7 +119,8 @@ button:hover{
   margin: 2em;
   padding: 5px;
   border-radius: 10px;
-  border: 5px var(--primary-orange) solid;
+  /* border: 5px var(--primary-orange) solid; */
+  border: 5px rgb(184, 184, 184) solid;
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-template-areas: 
