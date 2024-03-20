@@ -39,9 +39,9 @@ app.get('/fav-lijst', function(request, response) {
 	});
 })
 
-
 app.get('/detail/:id', function(request, response) {
-  fetchJson('https://fdnd-agency.directus.app/items/f_houses').then((apiData) => {
+  fetchJson('https://fdnd-agency.directus.app/items/f_houses/' + request.params.id).then((apiData) => {
+      console.log(apiData)
       response.render('detail', {data: apiData.data})
   });
 })

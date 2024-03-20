@@ -116,7 +116,7 @@ button:hover{
 
 .grid-container{
   /* background-color: var(--primary-orange); */
-  margin: 2em;
+  margin: 1em;
   padding: 5px;
   border-radius: 10px;
   /* border: 5px var(--primary-orange) solid; */
@@ -125,7 +125,7 @@ button:hover{
   grid-template-columns: max-content 1fr;
   grid-template-areas: 
   'image image'
-  'content content'
+  'content beoordelingen'
   'ster verwijderen'
   ;
 }
@@ -145,5 +145,13 @@ button:hover{
 .verwijderen{
   grid-area: verwijderen;
   justify-self: end;
-  align-self: center;
+  /* align-self: center; */
+  align-self: flex-end;
+}
+.content-ul{
+  margin-left: 1em;
+}
+.beoordelingen{
+  justify-self: center;
+  margin-top: 7px;
 }
